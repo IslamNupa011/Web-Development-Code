@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+
+<html>
+
+		<head>
+		    <title>Ans To The Question No-5</title>
+			
+			
+			
+			<style>
+			
+			table,th,td{
+			 border: 1px solid black;
+             border-collapse: collapse;
+	 		}
+			
+			td:hover{ 
+    background-color: #e6fff7;
+	border: 2px solid #ffb3ff;
+            }
+			
+					tr:hover{ 
+    background-color: #d9f2e6;
+	
+            }
+			
+			
+	
+			
+			
+			  </style>
+			
+			
+		
+		  </head>
+		  
+		  
+		  
+		  
+		<body>
+		
+		
+		Book Id : <input type="text" id="bid" name="bid">
+		Book Title : <input type="text" id="bt" name="bt">
+		Author Name : <input type="text" id="an" name="an">
+		<input type="button" value="Add New" onclick="insert();">
+		<hr/>
+		
+		<table style="width:100%">
+		   <thead>
+		      <tr>
+			  <th style="text-align:center;">Select</th>
+			  <th style="text-align:center;">Book ID</th>
+			  <th style="text-align:center;">Book Name</th>
+			  <th style="text-align:center;">Author Name</th>
+			  
+			  </tr>
+
+
+           		   
+		    </thead>
+		   
+		   
+		    <tbody id="tbody">
+			
+			  </tbody>
+		 
+		
+		  </table>
+		
+		
+		
+		
+		
+		<script>
+		var bookid=[];
+		var bookname=[];
+		var authorname=[];
+		var count=-1;
+		
+		function insert(){
+		count++;
+		// Adding Rows In The Table
+		var curid=document.getElementById('bid').value;
+		var curbookname=document.getElementById('bt').value;
+		var curauthorname=document.getElementById('an').value;
+		
+		// Psuhing the value in the array
+		
+		
+		bookid.push(curid);
+		bookname.push(curbookname);
+		authorname.push(curauthorname);
+		
+		
+		// Drawing The Table
+		
+		var tablebody=document.getElementById("tbody");
+		tablebody.innerHTML="";
+		var i;
+		for(i=0;i<bookid.length;i++){
+		
+		tablebody.innerHTML=tablebody.innerHTML+"<tr onclick='show("+count+")'><td><input type='checkbox' value='"+curid+"'></td><td>"+bookid[i]+"</td><td>"+bookname[i]+"</td><td>"+authorname[i]+"</td></tr>"
+		// Here we need to change something
+		}
+		
+		
+		
+		}
+		
+		function show(count){
+		 
+		alert("Book Name :"+bookname[count]+" "+"Author Name :"+authorname[count]);
+		}
+		
+		
+		 </script>
+
+
+          </body>		
+
+
+
+
+
+</html>

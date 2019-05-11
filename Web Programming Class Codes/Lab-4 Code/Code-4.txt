@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+<style>
+ul>li:nth-child(2) {
+    background-color: yellow;
+	color: hotpink;
+}
+
+   input:checked{
+   width:100px;
+   height:100px;
+   background-color:red;
+   }
+</style>
+</head>
+<body style="background-image:url('https://static.businessinsider.com/image/50db38a069bedd0d1000000c-750.jpg')">
+
+<ul>
+	<li> List 1</li>
+	<li> List 2</li>
+	<li> List 3</li>
+	<li> List 4</li>
+	<li> List 5</li>
+
+
+  </ul>
+  
+  <input type="checkbox" id="c1" name="c1" value="option1"> Option 1<br/>
+  <button style="widht:20%;height:40%;padding:10px;border-bottom:2px inset blue;margin:300px;border-bottom:2px dotted blue;margin:300px">Click Me </button>
+
+</body>
+
+
+
+
+
+</html>

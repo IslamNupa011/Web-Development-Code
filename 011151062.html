@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+   <head>
+         <title>Products_list_page</title>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    </head>
+
+    <body>
+	      <form>
+		     
+	         <h3>Add New Products</h3>
+	   
+	          Product Name:   <input type="text" id="t1" name="text" placeholder="Product Name" title="Required Field" style="display:inline;margin-left:23px;" autofocus required>
+	          Product Image: <input type="file" id="image_file" name="f1" style="display:inline">
+	          Selling Price: <input type="text" id="t" name="t2" placeholder="Ex. 300"><br/><br/>
+	          Available Quantity: <input type="text">	  
+	          Date: <input type="date" id="d" name="date" style="margin-left:60px">
+	          <button title="Click to add the item" style="width:10%;margin-left:116px;"><i class="glyphicon glyphicon-plus"></i>Add</button><br/>
+	         
+	         <hr/>
+	   
+	          
+	          <h2>All Products List</h2>
+		 
+		          Search: <input type="search" id="s1" name="search"><br/><br/>
+		          Show: <input type="number" min="5" max="50" step="5"id="t3" name="t4">entries<br/>
+				  
+				  <table style="border:1px solid black;width:100%;border-collapse:collapse;">
+	                 <thead>
+					     <tr>
+						 
+						 
+						     <th style="border:1px solid black;border-collapse:collapse;width:9%;height:10%;text-align:center;">Product Id</th>
+							 <th style="border:1px solid black;border-collapse:collapse;width:8%;height:10%;text-align:center;">Name</th>
+							 <th style="border:1px solid black;border-collapse:collapse;width:13%;height:10%;text-align:center;">Image</th>
+							 <th style="border:1px solid black;border-collapse:collapse;width:16%;height:10%;text-align:center;">Quantity available</th>
+							 <th style="border:1px solid black;border-collapse:collapse;width:16%;height:10%;text-align:center;">Selling Price(in $)</th>
+							 <th style="border:1px solid black;border-collapse:collapse;width:15%;height:10%;text-align:center;">Update/Delete</th>
+						 
+						 
+						 
+						 
+						 </tr>
+					 
+					 
+					 
+					 
+					 </thead>
+					 
+					     <tbody >
+						     <tr>
+							    
+						         <td height="100" style="border:1px solid black;border-collapse:collapse;text-align:center;"><a href="#">1</a></td>
+								 
+							     <td style="border:1px solid black;border-collapse:collapse;text-align:center;">Product 1</td>
+							     <td style="border:1px solid black;border-collapse:collapse;text-align:center;"><img src="https://ae01.alicdn.com/kf/HTB1eXmaeQ9WBuNjSspeq6yz5VXaH/fancy-mermaid-doll-cake-toppers-party-decoration-birthday-cake-decorating-supplies-the-little-mermaid-cupcake-toppers.jpg" alt="cake1" width="100px" height="90px"></td>
+							     <td style="border:1px solid black;border-collapse:collapse;text-align:center;">100</td>
+							     <td style="border:1px solid black;border-collapse:collapse;text-align:center;">30</td>
+							     <td style="border:1px solid black;border-collapse:collapse;text-align:center;">
+								     <a href="#">
+								        <span class="fa fa-edit"><a href="#" title="Update">Update</a></span>
+									  </a>
+									     <a href="#">
+											   <span class="fa fa-trash"><a href="#" title="Delete">Delete</a></span>
+											</a>
+								  </td>
+						 
+						 
+						       </tr>
+							      <tr>
+								    
+						             <td height="100" style="border:1px solid black;border-collapse:collapse;text-align:center;"><a href="#">2</a></td>
+									
+							         <td style="border:1px solid black;border-collapse:collapse;text-align:center;">Product 2</td>
+							         <td style="border:1px solid black;border-collapse:collapse;text-align:center;"><img src="https://cdn8.bigcommerce.com/s-166d3/images/stencil/1000x1280/products/1764/4918/princess-sophia-cake__43024.1465587881.jpg?c=2&imbypass=on" alt="cake2" width="100px" height="90px"></td>
+							         <td style="border:1px solid black;border-collapse:collapse;text-align:center;">150</td>
+							         <td style="border:1px solid black;border-collapse:collapse;text-align:center;">20</td>
+							         
+									 
+						             <td style="border:1px solid black;border-collapse:collapse;text-align:center;">
+								         <a href="#">
+								             <span class="fa fa-edit"><a href="#" title="Update">Update</a></span>
+											
+									     </a>
+									        
+											<a href="#">
+											   <span class="fa fa-trash"><a href="#" title="Delete">Delete</a></span>
+											</a>
+											
+								       </td>
+						 
+						           </tr>
+						 
+						 </tbody>
+	   
+	               </table>
+				   
+				   
+				  
+				   
+				   
+				   
+		   </form>
+		   
+		           <button><i class="fa fa-fast-backward" title="First Page"></i></button>
+				   <button><i class="glyphicon glyphicon-step-backward" title="Previous Page"></i></button>
+				   <button><i class="glyphicon glyphicon-step-forward" title="Next page"></i></button>
+				   <button><i class="glyphicon glyphicon-fast-forward" title="Last Page"></i></button>
+	</body>
+</html>

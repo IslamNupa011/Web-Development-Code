@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>JavaScript Illustration</title>
+		
+		<meta charset="UTF-8">
+		<meta name="description" content="sample web page for JS illistrations">
+		<meta name="keywords" content="JS, JavaScript, DOM">
+		<meta name="author" content="imam">
+		
+		<!--for glyphicon icon section -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--end of glyphicon section -->
+		
+		<style>
+		
+		#alert{
+			height:30px;
+			background-color:#ff944d;
+			padding:5px;
+			display:none;  /* at first the alert box will be hidden */
+		}
+		#alertbtn{
+			border:1px outset;
+			float:right; /* making sure that the close button is on the right side always */ 
+			background-color:red;
+			display:inline;
+		}
+		
+		h3{
+			text-align:center;
+			background-color:#ccfff2;
+			margin-bottom:10px;
+		}
+		#addnewuser{
+			border: 1px solid #009973;
+			background-color:#e6fff9;
+			padding-top:5px;
+		}
+		#addusertable{
+			width:100%;
+		}
+		#addbtn{
+			height:30px;
+			background-color:#00cc00;
+		}
+		#addbtn:hover{
+			background-color:#006600;
+			color:red;
+		}
+		#showuser{
+			background-color:#e6fff9;
+			width:auto;
+		}
+		
+		#tablecontainer{
+			max-height:500px;
+			overflow-y:auto;
+		}
+		
+		#tablecontainer table,#tablecontainer th,#tablecontainer tr{
+			border-bottom:1px solid blue;
+			border-collapse:collapse;
+		}
+		</style>
+		
+		<script>
+			/* this function will be called when the close btn of alert box is clicked */
+			function hidealert(){
+				document.getElementById("alertmsg").innerHTML="";
+				document.getElementById("alert").style.display="none";
+			}
+		
+			/* initially all the arrays contain no data. The data will be saved in those arrays */
+			var userid=[];
+			var useremail=[];
+			var usercity=[];
+			
+			/* to change the color of add new user section */
+			function changeclr(event){
+				if(event.type=="focus"){
+					document.getElementById("addnewuser").style.backgroundColor="white";
+					event.target.style.backgroundColor="#e6fff9";
+				}
+				else{
+					document.getElementById("addnewuser").style.backgroundColor="#e6fff9";
+					event.target.style.backgroundColor="white";
+				}
+			}
+			
+			/* checking whether or not the inputted data is valid or not */
+			function validate(){
+				document.getElementById("alertmsg").innerHTML="";
+				document.getElementById("alert").style.display="none";
+				
+				var id=document.querySelectorAll("#uid")[0].value;
+				if(id==""){
+					document.getElementById("alert").style.display="block";
+					document.getElementById("alertmsg").innerHTML="Invalid <b>ID</b> field";
+					return;
+				}
+				else if(userid.indexOf(id)!=-1){
+					/*already this id prople exists*/
+					document.getElementById("alert").style.display="block";
+					document.getElementById("alertmsg").innerHTML="<b>ID</b> already exists";
+					return;
+				}
+				
+				var email=document.getElementById("email").value;
+				if(email.indexOf("@")==-1 || email.indexOf(".com")==-1){
+					document.getElementById("alert").style.display="block";
+					document.getElementById("alertmsg").innerHTML=" Invalid <b>email</b> address";
+					return;
+				}
+				
+				var city=document.getElementById("city").value;
+				if(city=="None"){
+					document.getElementById("alert").style.display="block";
+					document.getElementById("alertmsg").innerHTML="Choose a <b>city</b> name";
+					return;
+				}
+				
+				/*if previous all the if clauses are false then your data is valid data so save the data to the corresponding arrays*/
+				
+				userid.push(id);
+				useremail.push(email);
+				usercity.push(city);
+				//after adding new data you need to clean the previous table and redraw the table again 
+				drawusertable();
+				
+			}
+			
+			//redrawing user table again
+			function drawusertable(){
+				/*at first cleaning the whole table by setting innerHTML="" */
+				document.getElementById("ulist").innerHTML="";
+					
+				if(userid.length==0){
+					/* If the table is empty */
+					var element=document.createElement('tr');
+					element.id="norec";
+					element.innerHTML="<td colspan='5' style='text-align:center;color:red;'>No Data exists...</td>";
+					document.getElementById("ulist").appendChild(element);
+				}
+				else{
+					var loop;
+					for(loop=0;loop<userid.length;loop++){
+						var elm=document.createElement("tr");
+						elm.innerHTML="<td style='text-align:center;'>"
+										+"<input type='checkbox' id='"+userid[loop]+"' value='"+userid[loop]+"'></td>"
+										+"<td>"+userid[loop]+"</td>"
+										+"<td>"+useremail[loop]+"</td>"
+										+"<td>"+usercity[loop]+"</td>"
+										+"<td><button type='button' onclick='deletedata("+userid[loop]+")'><i class='glyphicon glyphicon-trash'></i> Delete</button></td>"
+						document.getElementById('ulist').appendChild(elm);
+					}
+				}
+			}
+			
+			///to select all the check boxes when ALL link is clicked
+			function selectall(event){
+				var curtext=event.target.innerHTML;
+				if(curtext=="Check All"){
+				/* checking all checkboxes */
+					event.target.innerHTML="Uncheck All";
+					var allcheckboxes=document.querySelectorAll("#ulist input[type='checkbox']");
+					for(var i=0;i<allcheckboxes.length;i++){
+						allcheckboxes[i].checked=true;
+					}
+				}
+				else{
+				/* unchecking all check boxes */
+					event.target.innerHTML="Check All";
+					var allcheckboxes=document.querySelectorAll("#ulist input[type='checkbox']");
+					for(var i=0;i<allcheckboxes.length;i++){
+						allcheckboxes[i].checked=false;
+					}
+				}
+			}
+			
+			///this function will be called when the delete btn is clicked
+			function deletedata(uid){
+				console.log(userid);
+				if(window.confirm("Do you want to delete the data?")==true){
+					var index=userid.indexOf(uid.toString());
+					console.log(index);
+					
+					userid.splice(index,1); /// deleting user id from userid array
+					useremail.splice(index,1);///deleting user email from useremail array 
+					usercity.splice(index,1); ///deleting user city from usercity array
+					
+					drawusertable();			/// redrawing the table after deletion
+				
+				}
+			}
+			
+		</script>
+		
+		
+	</head>
+	
+	<body>
+		<!-- alert box section -->
+		<div id="alert">
+			<span id="alertmsg"></span>
+			<input type="button" value="X" id="alertbtn" onclick="hidealert();">
+		</div>
+		
+		<!--users list heading section-->
+		<h3>Users List</h3>
+		
+		<!-- Add New User Section -->
+		<div id="addnewuser">
+			<form action="#">
+				<table id="addusertable">
+					<tbody>
+						<tr>
+							<th>ID :</th>
+							<td><input type="text" id="uid" name="uid" placeholder="Your ID" onfocus="changeclr(event);" onblur="changeclr(event);"></td>
+							<th>Email :</th>
+							<td><input type="email" id="email" name="email" placeholder="your_email@gmail.com" onfocus="changeclr(event);" onblur="changeclr(event);"></td>
+							<th>City :</th>
+							<td>
+								<select id="city" onfocus="changeclr(event);" onblur="changeclr(event);">
+									<option value="None" selected>None</option>
+									<option value="Dhaka">Dhaka</option>
+									<option value="Chittagong">Chittagong</option>
+									<option value="Rajshahi">Rajshahi</option>
+									<option value="Others">Others</option>
+								</select>
+							</td>
+							<td><input type="button" id="addbtn" onclick="validate();" value="Add New User"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<div id="showuser">
+			<h4 style="text-align:center;">Show Users List</h4>
+			<div id="tablecontainer">
+				<table style="width:100%;background-color:#ffccb3;">
+					<thead>
+						<tr style="background-color:#ff5c33;">
+							<th style="width:100px;"><a href="#" onclick="selectall(event);">Check All</a></th>
+							<th>User ID</th>
+							<th>Email Address</th>
+							<th>Current City</th>
+							<th style="width:100px;"></th>
+						</tr>
+					</thead>
+					<tbody id="ulist">
+					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script>
+			///calling the function to initially draw the table
+			drawusertable();
+		</script>
+	</body>
+</html>

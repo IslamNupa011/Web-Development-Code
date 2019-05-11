@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+ 
+   #alert-sec{
+      display:none;
+	  height:40px;
+	  width:100%;
+	  padding:5px;
+	  background-color:gray;
+    
+   }
+ 
+ </style>
+
+</head>
+<body>
+   <div id="alert-sec">
+     <span id="alert-msg"></span>
+	 <button style="float:right;">X</button>
+   
+   
+   </div>
+   <h2 style="text-align:center; background-color:yellow;">Users list</h2>
+   
+     ID:<input type="text" id="id" name="id">
+	 Email:<input type="email" id="email" name="email">
+     CITY:<select id="city">
+           <option value="-1">None</option>	
+             <option value="1">Dhaka</option>	    
+	 
+  <option value="2">Comilla</option>	    
+	 	 
+	 
+	 </select>
+	 
+   <input type="button" value="Add New User" onclick="checkvalidate();">
+   
+   <br/>
+   <table>
+     <thead>
+	    <tr>
+		<th><a href="#">Check All</th>
+		<th>Id</th>
+		<th>Email</th>
+		<th>City</th>
+		<th></th>
+		
+		</tr>
+	 
+	 </thead>
+	 
+	 <tbody id="tbody">
+	 
+	 
+	 </tbody>
+   </table>
+
+   <script>
+      var userid=[];
+	  var useremail=[];
+	  var usercity=[];
+     
+      function checkvalidate(){
+	  
+	   var curid=document.getElementById("id").value;
+	   var curemail=document.getElementById("email").value;
+	   var city=document.getElementById("city").value;
+	  
+	  
+	  userid.push(curid);
+	  useremail.push(curemail);
+	  usercity.push(city);
+	  
+	  document.getElementById("tbody").innerHTML=document.getElementById("tbody").innerHTML + 
+	  "<tr><td><input type='checkbox' value='"+curid+"'></td><td>"+curid+"></td><td>"+curemail+"</td><td>"+city+"</td><td><input type='button' value='Delete' onclick='deletedata("+curid+")'></td></tr>";
+	  
+	  }
+	  
+	  
+	  function deletedata(id){
+	    if(window.confirm("Do u want to delete?")){
+		  var index=userid.indexOf(id);
+		
+		
+		 userid.splice(index,1);
+		  useremail.splice(index,1);
+		   usercity.splice(index,1);
+		   
+		   var tablebody=document.getElementById("tbody").innerHTML;
+		   tablebody="";
+		   for(var l=0;l<userid;l++){
+		      tablebody=tablebody+"<tr><td><input type='checkbox' value='"+userid[]+"'></td><td>"+userid[]+"></td><td>"+useremail[]+"</td><td>"+city+"</td><td><input type='button' value='Delete' onclick='deletedata("+curid+")'></td></tr>";
+		   
+		   
+		   }
+		}
+		
+		
+		
+	  
+	  }
+   
+   
+   </script>
+   
+
+</body>
+
+
+
+</html>

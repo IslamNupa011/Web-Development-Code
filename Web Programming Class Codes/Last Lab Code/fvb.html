@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+  
+   #alert-src{
+   
+   display:none;
+   height:40px; 
+   width:100%; padding:5px; 
+   background-color:pink;
+   
+   }
+   
+  </style>
+ </head>
+
+<body>
+
+ <div id="alert-src" >
+   <span id="alert-msg"> </span>
+   <button style="float:right;"> X </button>
+   </div>
+   
+   <h2 style="text-align:center;background-color:pink"> USERS LIST </h2>
+   <form>
+   ID: <input type='text' id='name' name='name'>
+   EMAIL:<input type='email' id='email' name='email'>
+   CITY: <select id='city'>
+      <option value="1"> Dhaka </option>
+	  <option value="2"> Ctg </option>
+	  <option value="3"> Comilla </option>
+	  
+	  </select>
+	  
+	  <input type='button' value='add new user' onclick='checkvalidate();' > 
+	  
+	  <br/>
+	  
+	  <table>
+	   <thead>
+	    <tr>
+		  <th> <a href="#"> Check all </a> </th>
+		  <th> ID </th>
+		  <th> EMAIL </th>
+		  <th> City </th>
+		  <th>   </th>
+		  
+		  </tr>
+	   </thead>
+	   
+	   <tbody id="tbody">
+	    
+	   
+	   </tbody>
+	   
+	   </table>
+	   
+	   <script>
+	   
+	   var userid=[];
+	   var useremail=[];
+	   var usercity=[];
+	   
+	    function checkvalidate() {
+		
+		   var curid=document.getElementById("id").value;
+		     var curemail=document.getElementById("email").value;
+			   var city=document.getElementById("city").value;
+			   
+			   userid.push(curid);
+			   useremail.push(curemail);
+			   usercity.push(city);
+			   
+		   
+		   document.getElementById("tbody").innerHTML=document.getElementById("tbody").innerHTML + 
+		   " <tr> <td><input type ='checkbox' value='"+curid+"'></td><td> "+curid+"</td> <td>"+curemail+" </td><td> "+city+"</td> <td><input type='button' value='delete' onclick='deletedata("+curid+")'></td></tr> " ;
+	   }
+	   
+	   
+	   function deletedata(id){
+	   
+	     if(window.confirm("do you want to delete? " )) {
+		 
+		  var index=user.id.indexOf(id);
+		  
+		  userid.splice(index,1);
+		  useremail.splice(index,1);
+		  usercity.splice(index,1);
+		  
+		  var
+		  tablebody=document.getElementById("tbody").innerHTML ;
+		  TABLEBODY=" " ;
+		  
+		  for(var i=0; i<userid.lenght;i++){
+		  //TABLE REDRAW 
+		  }
+		  
+		  
+		 }
+		 
+	   }
+	   
+	   </script>
+</body>
+</html>

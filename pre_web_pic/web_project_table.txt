@@ -1,0 +1,111 @@
+
+
+
+create table user_signup(
+    user_id int auto_increment,
+    user_name varchar(30),
+    user_password varchar(50),
+    user_phn varchar(40),
+    user_email varchar(50),
+    user_address varchar(50),
+    primary KEY(user_id)
+
+
+);
+
+INSERT INTO `user_signup`(`user_id`, `user_name`, `user_password`, `user_phn`, `user_email`, `user_address`) 
+VALUES ('1','ayan','1234','01845056597','ayan@gamil.com','dhaka');
+
+create TABLE services(
+
+   srvc_id int,
+    srvc_name varchar(40),
+    srvc_availability bit,
+    day varchar(20),
+    ti_me varchar(20),
+    da_te varchar(20),
+    price varchar(20),
+    
+    PRIMARY KEY (srvc_id)
+);
+
+INSERT INTO `services`(`srvc_id`, `srvc_name`, `srvc_availability`, `day`, `ti_me`, `da_te`, `price`) 
+VALUES ('1','weeding','0','friday','12:00','10-09-2018','100');
+
+create table equipment(
+  e_id int auto_increment,
+  e_name varchar(50),
+    e_available varchar(5),
+    e_quantity int,
+     e_price varchar(40),
+    PRIMARY key (e_id),
+   user_email varchar(20),
+   admin_email varchar(20),
+   user_id int,
+   foreign key(user_id) references user_signup(user_id)
+   
+);
+
+
+insert into equipment values ('1','table','0','12',LOAD_FILE('E:/image/candle.jpg'),'1000');
+
+
+
+
+create table booking(
+ booking_id int,
+    booking_name varchar(30),
+    confirmation boolean,
+    srvc_id int,
+    user_id int,
+    e_id int,
+    primary key(booking_id),
+    foreign key (srvc_id) REFERENCES services(srvc_id),
+    foreign key (user_id) REFERENCES user_signup(user_id),
+    foreign key (e_id) REFERENCES equipment(e_id)
+);
+
+INSERT INTO `booking`(`booking_id`, `booking_name`, `confirmation`, `srvc_id`, `user_id`, `e_id`) 
+VALUES ('1','ayan','yes','1','1','1');
+
+
+
+create TABLE cart(
+  cart_id int,
+    user_id int,
+    booking_id int,
+    srvc_details varchar(100),
+    total_payment varchar(100),
+    PRIMARY KEY (cart_id),
+    FOREIGN KEY (user_id) REFERENCES user_signup(user_id),
+    FOREIGN KEY (booking_id) REFERENCES booking(booking_id)
+    
+);
+
+INSERT INTO `cart`(`cart_id`, `user_id`, `booking_id`, `srvc_details`, `total_payment`) 
+VALUES ('1','1','1','weeding_taken','20000');
+
+
+
+CREATE TABLE payment(
+    payment_id int,
+    cart_id int,
+    payments_method varchar(100),
+    PRIMARY KEY (payment_id),
+    FOREIGN key (cart_id) REFERENCES cart (cart_id)
+
+);
+
+INSERT INTO `payment`(`payment_id`, `cart_id`, `payments_method`) VALUES ('1','1','bkash');
+
+
+
+
+
+
+
+
+
+
+
+

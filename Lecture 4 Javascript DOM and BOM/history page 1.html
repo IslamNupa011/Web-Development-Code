@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Page 1</title>
+		
+	</head>
+
+	<body onclick="console.log(history.length);">
+		<div style="width:150%; height:5000px;">
+			<input type="button" value="history.back()" onclick="history.back();"><br/>
+			<input type="button" value="history.forward()" onclick="history.forward();"><br/>
+			<input type="button" value="history.go(2)" onclick="history.go(2);"><br/>
+			<input id='page 1' type="button" value="Go to page 1" onclick="window.location.href='history page 1.html';">
+			<input id='page 2' type="button" value="Go to page 2" onclick="window.location.href='history page 2.html';">
+			<input id='page 3' type="button" value="Go to page 3" onclick="window.location.href='history page 3.html';">
+		</div>
+	</body>
+</html>

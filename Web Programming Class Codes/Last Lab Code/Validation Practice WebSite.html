@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Validation Checking Site</title>
+        <meta charset="utf-8">
+        
+        <style>
+            form span{
+                color: red;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <h3 style="text-align: center;">Validation Checking</h3>
+        
+        <form method="post" action="#">
+        
+        Username conditions:
+        <ul>
+            <li>First character must contain any one of the character from A to Z, a to z, underscore(_)</li>
+            <li>All the other characters can contain A to Z, a to z, 0-9, underscore(_) and hyphene(-)</li>
+            <li>At least 4 characters and at most 15 characters</li>
+        </ul>
+        Change the color to green when any of the condition fulfills.
+        <br/>
+        
+            <input type="text" placeholder="User Name" id="uname" name="uname" onkeyup="unamevalidate();"> <span id="invalid">Valid Character</span>|<span id="long">Max Size Limit</span>|<span id="short">Min Size Limit</span><br/>
+        
+            
+        Password Conditions:
+        <ul>
+            <li>At least 10 characters</li>
+            <li>Must contain at least one Capital letter</li>
+            <li>Must contain at least one lowercase letter</li>
+            <li>Must contain at least one special character</li>
+        </ul>
+        Change the color to green when any one of the condition fulfills.
+            <br/>
+            <input type="password" id="pass" name="pass" onkeyup="passvalidate();"><span id="length">Valid Length</span>
+            |<span id="capital">One Capital Letter</span>|<span id="small">One Small Letter</span>|<span id="special">One Special Character</span><br/>
+            <br/>
+            Email (whole email matching): <input type="text" id="email" name="email" onkeyup="mailvalidate();"> <span id="inv-mail" style="display:none;">Invalid Email</span><br/>
+            
+            
+        </form>
+        
+        <script>
+            function unamevalidate(){
+                var uminlength=/^.{4,}$/; ///at least 4 character checking
+                var umaxlength=/^.{16,}$/;  ///at most 15 character checking
+                var uvalidchar=/^[A-Za-z_][A-Za-z0-9_-]*$/; ///valid character checking
+                
+                var userinput=document.getElementById('uname').value;
+                var flag=0;
+                
+                ///min length checking
+                if(uminlength.test(userinput)){
+                    document.getElementById('short').style.color="green";
+                }
+                else{
+                    document.getElementById('short').style.color="red";
+                    flag=1;
+                }
+                
+                ///max length checking
+                if(umaxlength.test(userinput)){
+                    document.getElementById('long').style.color="red";
+                    console.log(true);
+                }
+                else{
+                    document.getElementById('long').style.color="green";
+                    console.log(false);
+                    flag=1;
+                }
+                
+                ///valid character checking
+                if(uvalidchar.test(userinput)){
+                    document.getElementById('invalid').style.color="green";
+                }
+                else{
+                    document.getElementById('invalid').style.color="red";
+                    flag=1;
+                }
+            }
+            
+            function passvalidate(){
+                var plength=/^.{10,}$/;///length checking
+                var pcap=/[A-Z]+/;///capital checking
+                var psmall=/[a-z]+/;///lowercase checking
+                var pspecial=/^.*[^A-Za-z0-9].*$/;///special character checking
+                
+                var passinput=document.getElementById("pass").value;
+                
+                if(plength.test(passinput)){
+                    document.getElementById('length').style.color="green";
+                }
+                else{
+                    document.getElementById('length').style.color="red";
+                }
+                
+                if(pcap.test(passinput)){
+                    document.getElementById('capital').style.color="green";
+                }
+                else{
+                    document.getElementById('capital').style.color="red";
+                }
+                
+                if(psmall.test(passinput)){
+                    document.getElementById('small').style.color="green";
+                }
+                else{
+                    document.getElementById('small').style.color="red";
+                }
+                
+                if(pspecial.test(passinput)){
+                    document.getElementById('special').style.color="green";
+                }
+                else{
+                    document.getElementById('special').style.color="red";
+                }
+            }
+            
+            function mailvalidate(){
+                var emailexp=/^([a-zA-Z0-9_.-]+)@([a-z0-9_.-]+)\.([a-z.]{2,6})$/;
+                
+                var useremail=document.getElementById("email").value;
+                
+                if(emailexp.test(useremail)){
+                    document.getElementById("inv-mail").style.display="none";
+                }
+                else{
+                    document.getElementById("inv-mail").style.display="inline";
+                }
+            }
+        </script>
+        
+    </body>
+</html>

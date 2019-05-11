@@ -1,0 +1,9 @@
+create database t86;
+CREATE TABLE tester_turjo_trigger(
+    id int AUTO_INCREMENT,
+    Service_Name varchar(20),
+    Status varchar(20),
+    Address varchar(20),
+    PRIMARY KEY(id)
+
+);

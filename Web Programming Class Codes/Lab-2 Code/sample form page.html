@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Online Job Portal</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+
+    <body>
+        <ul>
+            <li>Home</li>
+            <li>My Profile</li>
+            <li>Job Search</li>
+            <li>Incoming Requests</li>
+            <li>Notifications</li>
+            <li>Contact Us</li>
+            <li><button><i class="glyphicon glyphicon-search"></i></button><input type="search" id='search'></li>
+        </ul>
+        <hr/>
+        <form>
+            Name: <input type="text" id="name" name="name" value="ABCD" placeholder="Enter Your Name" title="Mr. X"  autofocus><br/>
+            Upload Image: <input type="file" id="imagefile" name="imagefile"><br/>
+            Email: <input type="email" id="email" name="email" value="xxx@gmail.com" readonly><br/>
+            Contact No: <input type="tel" id="phone" name="phone"><br/>
+            City: 
+            <select>
+                <option value="dk">Dhaka</option>
+                <option value="ctg" selected>Chittagong</option>
+                <option value="com">Comilla</option>
+            </select><br/>
+            Address: <textarea placeholder="enter your address here" style="width: 400px; height:100px;"  id="addr" name="addr"></textarea><br/>
+            Date of Birth: <input type="date" id="dob" name="dob"><br/>
+            Gender: <input type="radio" name="gender" value="male" checked>Male <input type="radio" name="gender" value="female">Female<br/>
+
+            <h4>Educational Qualification</h4>
+            <table style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Certification</th>
+                        <th>Board/Institution</th>
+                        <th>Passing Year</th>
+                        <th>GPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>B.Sc.</td>
+                        <td>UIU</td>
+                        <td>2018</td>
+                        <td>4.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>B.Sc.</td>
+                        <td>UIU</td>
+                        <td>2018</td>
+                        <td>3.50</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            Skills: 
+            <ol type="i">
+                <li>Hard-working</li>
+                <li>Trustworthy</li>
+                <li>First Learner</li>
+            </ol>
+            Preferred Job Location: 
+            <input type="checkbox" value="dhaka" name="loc1">Dhaka 
+            <input type="checkbox" value="hometown" name="loc2" checked>Home Town 
+            <input type="checkbox" value="anywhere" name="loc3">AnyWhere 
+            <br/>
+
+            <div>
+                <span style="width:50%; display: inline-block; border: 1px solid blue;float:left;">
+                    <h4>Reference 1</h4>
+                    Name:<input type="text" id="ref1" name="ref1"><br/>
+                    Details: <textarea id="ref1det" name="ref1det"></textarea>
+                </span>
+                <span style="width:50%; display: inline-block; border:1px solid blue; float: left;">
+                    <h4>Reference 2</h4>
+                    Name:<input type="text" id="ref2" name="ref2"><br/>
+                    Details: <textarea id="ref2det" name="ref2det"></textarea>
+                </span>
+            </div>
+            
+            
+            Password: <input type="password" id="pass" name="pass" required><br/>
+            Rate this site: <input type="range" style="width:150px;" min="1" max="5" step="1" id="rating" name="rating"> <br/>
+            <input type="reset" value="Reset"><input type="submit" value="Submit"><input type="button" value="Save as Draft"><br/>
+
+            
+
+        </form>
+    </body>
+
+</html>

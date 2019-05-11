@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	  <title>CSS</title>
+	 
+	  
+	  <style>
+	     div ~ p{
+		    background-color: yellow;
+		 
+		 }
+		  [target=_blank]{
+		     background-color:red;
+		  }
+		  
+		   a[target=_top]{
+		     background-color:green;
+		  }
+	      input[type=text]{
+		    background-color:maroon;
+			color:white;
+		  
+		  }
+		  /* unvisited link */
+            a:link {
+              color: white;
+            }
+
+             /* visited link */
+                    a:visited {
+                     color: green;
+                }
+
+            /* mouse over link */
+                      a:hover {
+                      color: hotpink;
+                 }
+
+            / * selected link */
+                 a :active {
+                 color: blue;
+                }
+				
+				li:nth-child(2),li:nth-last-child(1){
+				  background-color:pink;
+				}
+				  div .active{
+				    background-color:green;
+				  }
+				  
+				   div :not(.active){
+				    background-color:;
+				  }
+                   input:checked{
+				     height:20px;
+					 width:30px;
+				   }
+
+	   </style>
+	</head>
+
+      <body>
+	     <div>
+             <p>Paragraph 1 in the div.</p>
+             <p>Paragraph 2 in the div.</p>
+             <span><p>Paragraph 3 in the div.</p></span>
+			 
+			 <span>
+			     <p>nupa</p>
+				 <p>nooyel</p>
+			 
+			   </span>
+			 
+          </div>
+		     <div>
+			    <p>HI</p>
+			 
+			 </div>
+
+            <p>Paragraph 4. Not in a div.</p>
+            <p>Paragraph 5. Not in a div.</p>
+			<p>Paragraph 6. Not in a div.</p>
+            <p>Paragraph 7. Not in a div.</p>
+			
+			<hr/>
+			<a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">w3school</a><br/>
+			<a href="https://www.google.com/" target="_top">google</a>
+			<br/><br/>
+			
+			<hr/>
+			
+			<form>
+			   <input type="text" name="text" id="text">
+			   <input type="password" name="pass" id="pass">
+			   <input type="text" name="text1" id="text1">
+			   
+			
+			
+			</form></br>
+			
+			<hr/>
+			<a href="https://www.google.com/" target="_blank">This is a link</a>
+		    <a href="https://translate.google.com/#en/bn/sibling" target="_blank">This is a link</a>
+           
+<hr/>
+		   <ul type="none">
+		     <li>nupa</li>
+			   <li>noyel</li>
+			     <li>noor</li>
+				   <li>parvin</li>
+				     <li>polash</li>
+					   <li>sukannya</li>
+		   
+		   
+		   </ul>
+            
+			<hr/>
+			<div>
+			  <p class="active">i m nupa</p>
+			  <p>she is sukannya</p>
+			  <p>he is himu</p>
+			
+			
+			</div>
+			
+			<hr/>
+			
+			<input type="checkbox" id="ch1" name="male" value="option1">Male
+			<input type="checkbox" id="ch1" name="male" value="option1">Female
+	  
+	  
+	  </body>
+
+
+</html>

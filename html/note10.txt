@@ -1,0 +1,125 @@
+###Using The class Attribute
+The class attribute specifies one or more class names for an HTML element.
+
+The class name can be used by CSS and JavaScript to perform certain tasks for elements with the specified class name.
+
+###Using The class Attribute in JavaScript
+JavaScript can access elements with a specified class name by using the getElementsByClassName() method:
+Example--
+When a user clicks on a button, hide all elements with the class name "city":
+
+
+###HTML elements can have more than one class name, each class name must be separated by a space.
+
+Example-
+Style elements with the class name "city", also style elements with the class name "main":
+
+<h2 class="city main">London</h2>
+In the example above, the first h2 element belongs to both the "city" class and the "main" class.
+
+###An iframe is used to display a web page within a web page.
+An HTML iframe is defined with the <iframe> tag:
+
+<iframe src="URL"></iframe>
+The src attribute specifies the URL (web address) of the inline frame page.
+Use the height and width attributes to specify the size of the iframe.
+
+The attribute values are specified in pixels by default, but they can also be in percent (like "80%").
+<iframe>	Defines an inline frame
+
+
+###JavaScript makes HTML pages more dynamic and interactive.
+
+###Path	Description
+<img src="picture.jpg">	picture.jpg is located in the same folder as the current page
+<img src="images/picture.jpg">	picture.jpg is located in the images folder in the current folder
+<img src="/images/picture.jpg">	picture.jpg is located in the images folder at the root of the current web
+<img src="../picture.jpg">	picture.jpg is located in the folder one level up from the current folder
+
+File paths are used when linking to external files like:
+
+Web pages
+Images
+Style sheets
+JavaScripts
+
+###The HTML <head> Element
+The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag.
+
+HTML metadata is data about the HTML document. Metadata is not displayed.
+
+Metadata typically define the document title, character set, styles, links, scripts, and other meta information.
+
+The following tags describe metadata: <title>, <style>, <meta>, <link>, <script>, and <base>.
+
+###The <meta> element is used to specify which character set is used, page description, keywords, author, 
+and other metadata.
+
+Metadata is used by browsers (how to display content), by search engines (keywords), and other web services.
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+</head>
+
+Refresh document every 30 seconds:
+
+<meta http-equiv="refresh" content="30">
+
+###Setting The Viewport
+HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag.
+
+The viewport is the user's visible area of a web page. It varies with the device, and will be smaller on a mobile phone 
+than on a computer screen.
+
+You should include the following <meta> viewport element in all your web pages:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary 
+depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+Here is an example of a web page without the viewport meta tag, and the same web page with the viewport meta tag:
+
+Tip: If you are browsing this page with a phone or a tablet, you can click on the two links below to see the difference.
+
+####According to the HTML5 standard; the <html>, the <body>, and the <head> tag can be omitted.
+
+The following code will validate as HTML5:
+
+Example
+<!DOCTYPE html>
+<title>Page Title</title>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+Note:
+
+W3Schools does not recommend omitting the <html> and <body> tags. Omitting these tags can crash DOM or 
+XML software and produce errors in older browsers (IE9).
+
+However, omitting the <head> tag has been a common practice for quite some time now.
+
+###HTML head Elements
+Tag	Description
+<head>	Defines information about the document
+<title>	Defines the title of a document
+<base>	Defines a default address or a default target for all links on a page
+<link>	Defines the relationship between a document and an external resource
+<meta>	Defines metadata about an HTML document
+<script>	Defines a client-side script
+<style>	Defines style information for a document
+
+
+
+
+
+
+
+

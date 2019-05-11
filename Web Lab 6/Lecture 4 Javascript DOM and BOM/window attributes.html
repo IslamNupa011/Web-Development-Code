@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Page 1</title>
+		<script>
+		window.name='attribute window';
+		</script>
+	</head>
+
+	<body>
+		<div style="width:150%; height:5000px;">
+			<input type="button" value="alert" onclick="window.alert('I am an alert :P')"><br/>
+			<input type="button" value="make blur" onclick="window.blur();"><br/>
+			<input type="button" value="close the window" onclick="window.close();"><br/>
+			<input type="button" value="confirmation box" onclick="document.write(window.confirm('Do you want to confirm?'));"><br/>
+			<input type="button" value="open new window" onclick="window.open();"><br/>
+			<input type="button" value="print this window" onclick="window.print();"><br/>
+			<input type="button" value="prompt box" onclick="document.write(window.prompt('Enter your name : '));"><br/>
+			<input type="button" value="scroll the window" onclick="window.scroll(100,200);"><br/>
+			<input type="button" value="stop loading" onclick="window.stop();"><br/>
+			<input type="button" value="resizing" onclick="window.resizeTo(100,500);"><br/>
+			
+			<input type="button" value="new page" onclick="window.open('window properties.html','properties window');"/>
+		</div>
+	</body>
+</html>

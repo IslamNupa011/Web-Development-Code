@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Page 1</title>
+		<script>
+		function scrollfn(){
+			
+			document.getElementById('scroll').innerHTML='scrollY => '+window.scrollY +'<br/>';
+			
+		
+		}
+		</script>
+	</head>
+
+	<body>
+	<button type="button" onclick="window.close();">Close this page</button>
+		<script>
+			console.log(window.closed);
+			console.log(window.history);
+			console.log(window.innerHeight+' '+window.outerHeight+' '+window.innerWidth+' '+window.outerWidth);
+			console.log(window.location);
+			window.name="properties window";
+			console.log(window.name);
+			console.log(window.fullScreen);
+			console.log(window.navigator);
+			console.log(window.parent);
+			console.log(window.screenX);
+			console.log(window.screenY);
+			console.log(window.scrollX);
+			console.log(window.scrollY);
+			
+			
+			
+			document.write('isClosed => '+ window.closed +'<br/>');
+			document.write('History => '+window.history +'<br/>');
+			document.write('Height and Width => '+window.innerHeight+' '+window.outerHeight+' '+window.innerWidth+' '+window.outerWidth +'<br/>');
+			document.write('Location => '+window.location +'<br/>');
+			document.write('Name => '+window.name +'<br/>');
+			document.write('fullscreen => '+window.fullScreen+'<br/>');
+			document.write('Navigators =>'+window.navigator +'<br/>');
+			document.write('Parent window =>'+window.parent +'<br/>');
+			document.write('screenX => '+window.screenX +'<br/>');
+			document.write('screenY => '+window.screenY +'<br/>');
+			document.write('scrollX => '+window.scrollX +'<br/>');
+			document.write('scrollY => '+window.scrollY +'<br/>');
+		</script>
+		
+		<div style="width:auto;height:5000px;background-color:red;">
+		
+		</div>
+		<button type="button" onclick='scrollfn();'>Click Me</button>
+		<div id='scroll' style="width:auto;height:5000px;background-color:green;">
+		
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+ <title>Sample Validation Checking </title>
+
+</head>
+
+
+
+
+
+<body>
+
+
+		<form onsubmit="return checking();">
+		
+		User Name : <input type="text" id="uname" name="uname"> 
+		<p style="display:none;color:red;" id="not1">Invalid User Name </p>
+		
+		<br/>
+		
+		Password : <input type="password" id="pass" name="pass"> 
+		<p style="display:none;color:red;">Invalid Password </p>
+		
+		
+		<input type="submit" value="Log In">
+		
+		   </form>
+		   
+		   
+		   
+		   
+		   <script>
+		   
+		   function checking(){
+		   
+		   
+					var uregexp = /^[A-Za-z][A-Za-z0-9-_]{7,14}$/;   // Pattern
+					
+					var username=document.getElementById("uname").value;
+					
+					if(uregexp.test(username)){
+					
+					document.getElementById("not1").style.display="none"; // only change 
+					
+					// Server Code Here
+					
+					return true;
+					}
+					
+					
+					else{
+					
+					document.getElementById("not1").style.display="inline"; // only change 
+					
+					
+				//	document.getElementById("not1").style="display:inline";
+				
+				return false;
+					
+					
+					 
+					 
+					 }
+		   
+		   }
+		   
+		   
+						 </script>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

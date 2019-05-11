@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+
+	<head>
+	<title> Practice Code</title>
+	
+	  <style>
+	   
+	   #alert-sec{
+	   
+	   display:none;
+	   height:40px;
+	   width:100%;
+	   padding:5px;
+	   background-color:gray;
+	   }
+	  
+	      </style>
+	
+	     </head>
+		 
+		 
+		 
+					<body>
+					
+					  <div id="alert-sec">
+					  
+					  <span id="alert-msg"> </span>
+					  <button style="float:right">X</button>
+					  
+					     </div>
+						 <h2 style="text-align:center;background-color:hotpink;">Users List </h2>
+						 
+						 
+						 ID : <input type="text" id="id" name="id" style="padding-right:2px">
+						  Email : <input type="email" id="email" name="email" style="padding-right:2px">
+						  
+						  City: 
+						  <select id="city" style="padding-right:2px">
+						  <option value="-1">None</option>
+						  <option value="1">Dhaka</option>
+						  
+						  <option value="2">Commila</option>
+						  
+						     </select>
+							 <input type="button" value="Add New User"  onclick="checkvalidate()">
+							
+						 
+						   <br/>
+					
+					
+					<table>
+					
+						<thead>
+						  <tr>
+						   <th> <a href="#">Check All </a></th>
+						   <th> ID</th>
+						    <th> Email</th>
+							  <th> City</th>
+							    <th> </th>
+						   
+						    </tr>
+						
+						    </thead>
+							
+							
+							
+							
+							  <tbody id="tbody">
+							     </tbody>
+					
+					
+					
+								</table>
+								
+								<script>
+								
+								var usercity=[];
+								var useremail=[];
+								var userid=[];
+								
+								function checkvalidatealidate(){
+								
+								//Alert Box Code Here Goes
+								
+								
+								// Adding new rows to table
+								var curid=document.getElementById("id").value;
+								var curemail=document.getElementById("email").value;
+								var city=document.getElementById("city").value;
+								
+								userid.push(curid);
+								useremail.push(curemail);
+								usercity.push(city);
+								
+								
+								document.getElementById("tbody").innerHTML=document.getElementById("tbody").innerHTML+"<tr> <td><input type='checkbox' value='"+curid+"'> </td> <td>"+curid+"</td> <td>"+curemail+"</td> <td>+"city"+</td> <td><input type='button' value='Delete' onclick='deletedata("+curid+")'></td> </tr>"; // Be Careful Here!!
+								
+								
+								}
+								function deletedata(id){
+								
+								if(window.confirm("Do You Want To Delete?")){
+								
+								var index=userid.indexOf(id);
+								userid.splice(index,1);
+								useremail.splice(index,1);
+								usercity.splice(index,1);
+								var tablebody = document.getElementById("tbody").innerHTML;
+								tablebody="";
+								
+								for(var l=0;l<userid.length;l++){
+								tablebody=tablebody++"<tr> <td><input type='checkbox' value='"+userid[l]+"'> </td> <td>"+userid[l]+"</td> <td>"+useremail[l]+"</td> <td>+"usercity[l]"+</td> <td><input type='button' value='Delete' onclick='deletedata("+userid[l]+")'></td> </tr>";
+								}
+								
+								
+								}
+								}
+								
+								   </script>
+					
+					
+					
+					   </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

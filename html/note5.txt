@@ -1,0 +1,55 @@
+##Links are found in nearly all web pages. Links allow users to click their way from page to page.
+
+HTML links are hyperlinks.
+
+You can click on a link and jump to another document.
+
+When you move the mouse over a link, the mouse arrow will turn into a little hand.
+
+Note: A link does not have to be text. It can be an image or any other HTML element.
+
+The href attribute specifies the destination address (https://www.w3schools.com/html/) of the link.
+
+The link text is the visible part (Visit our HTML tutorial).
+
+Clicking on the link text will send you to the specified address.
+
+Note: Without a forward slash on subfolder addresses, you might generate two requests to the server. 
+Many servers will automatically add a forward slash to the address, and then create a new request.
+
+
+##_blank - Opens the linked document in a new window or tab
+_self - Opens the linked document in the same window/tab as it was clicked (this is default)
+_parent - Opens the linked document in the parent frame
+_top - Opens the linked document in the full body of the window
+framename - Opens the linked document in a named frame
+
+
+##HTML bookmarks are used to allow readers to jump to specific parts of a Web page.
+Bookmarks can be useful if your webpage is very long.
+To make a bookmark, you must first create the bookmark, and then add a link to it.
+When the link is clicked, the page will scroll to the location with the bookmark.
+
+Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+
+Use the id attribute (id="value") to define bookmarks in a page
+Use the href attribute (href="#value") to link to the bookmark
+<a>	Defines a hyperlink
+
+##If a browser cannot find an image, it will display the value of the alt attribute:
+
+Use the HTML <img> element to define an image
+Use the HTML src attribute to define the URL of the image
+Use the HTML alt attribute to define an alternate text for an image, if it cannot be displayed
+Use the HTML width and height attributes to define the size of the image
+Use the CSS width and height properties to define the size of the image (alternatively)
+Use the CSS float property to let the image float
+Use the HTML <map> element to define an image-map
+Use the HTML <area> element to define the clickable areas in the image-map
+Use the HTML <img>'s element usemap attribute to point to an image-map
+Use the HTML <picture> element to show different images for different devices
+Note: Loading images takes time. Large images can slow down your page. Use images carefully.
+

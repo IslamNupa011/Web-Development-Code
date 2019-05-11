@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+
+<html>
+
+ <head>
+
+        <title>Web Lab 6</title>
+            
+			
+			</head>
+ 
+ 
+ 
+
+
+
+
+  <body>
+   <h1 style="text-align:center;">Web Lab Java Script </h1>
+   
+   
+   
+   <div id="parent" style="height:500px;width:500px;background-color:gray;overflow: hidden;">
+   
+   
+   
+   
+			</div>
+			
+			<input type="button" value="Add New" onclick="drawelm();">
+			
+			<script>
+			
+			function drawelm(){
+			
+		  /*document.getElementById("parent").innerHTML = document.getElementById("parent").innerHTML + "<span style='display:inline-block;height:100px;width:100px;background-color:red;margin:3px'> </span>";
+			 */
+			  var child=	document.createElement("span");
+		 child.style="display:inline-block;height:100px;width:100px;background-color:red;margin:3px;"
+			
+			//document.getElementById("parent").append(child);
+			document.getElementById("parent").appendChild(child);
+			 }
+			 // Write Inside The Function !!!!!!!!!!!!!!!!!!!!!!
+			
+		
+			
+					</script>
+ 
+ 
+ 
+ 
+             </body>
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,44 @@
+Theoretical Section(12-16 marks):
+
+Basic HTTP methods (GET vs POST)
+Session (how to start a session, how to set a session variable, how to destroy a session) and 
+Cookies basics(how to create, modify and destroy cookies using PHP and JS) and difference between session and cookies.
+
+
+Web Services and Web APIs understanding and when to adopt which techniques during software development
+Basics of MVC and differentiating different parts (Model, View and Control) and their corresponding tasks.
+
+
+Microservice vs Monolithic architectures, both advantages and disadvantages.
+
+
+How to interact between PHP and MySQL DBMS for different SQL commands like (insert, update, delete, select)
+
+Indexed array vs associative array in PHP
+
+How to declare and use PHP functions
+
+There exists a high possibility that the question will be conceptual based. As a result, 
+you don't need to memorize anything, just try to understand each and every topic so that if 
+you are instructed to decide between two options you always choose the best one. 
+
+Implementation Section(24-30 marks):
+
+ 
+
+a) AJAX, PHP, MySQL(12-15 marks):  
+
+Dynamically show an HTML table(during Update or, Deletion of data) without loading the page using AJAX
+Dynamically change the content of a combo box based on another drop down boxes selected value
+Dynamically create a search box where the search result will be generated without reloading the page
+Create a sample notification system using AJAX
+Create a sample messenger using AJAX
+b) Session, PHP, MySQL(10-12 marks):
+
+Build a simple sign in, sign up system where only you can access the home page in logged in situation otherwise you 
+will be redirected to the sign in page directly.
+Create three PHP pages and a menu bar with 3 menus. When I click on menu item 1 then go to page page1.php, 
+when I click on menu item 2 then go to page2.php, when I click on menu item 3 then go to page3.php
+Create a simple PHP page with two menu items. If the menu item 1 is selected then the page will show 
+some content(without going to a new page) and when the menu item 2 is selected then the page will show different contents.
+Implementation related to cookies is out of term final scope.

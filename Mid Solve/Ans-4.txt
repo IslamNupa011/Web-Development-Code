@@ -1,0 +1,90 @@
+a)
+
+<style>
+				div li{
+				display:inline;
+				}
+				
+				</style>
+				
+				
+
+
+
+b)
+
+
+
+<style>
+				div li{
+				
+				list-style-type: none;
+				}
+				
+				</style>
+
+
+				
+				
+c)  <style>
+      a{
+			text-decoration:none;
+			}
+
+        </style>	
+		
+		
+		
+		
+
+d)    <style>
+           .active{
+				background-color:oranged;
+				color:white;
+				}
+
+              </style>	
+
+
+
+e) <style>
+
+     li:not(active){
+				background-color:coral;
+				}
+
+
+           </style>			
+
+
+
+f)  <style>
+	li:nth-child(6){
+				background-color:tomato;
+				}
+
+       </style>		
+
+
+g)  <style>
+
+	li:hover:nth-child(6){
+				background-color:blue;
+				}
+
+       </style>	  
+
+
+
+h)   <style>
+				#navbar{
+	overflow: hidden;
+    z-index: +999;
+	
+	position: -webkit-sticky; /*Sticky To Stick The Navigation Bar After Scroll*/
+    position: sticky;
+    top: 0px;
+				}
+
+
+         </style>	   

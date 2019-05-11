@@ -1,0 +1,81 @@
+CREATE TABLE signup(
+    
+    user_id int NOT NULL AUTO_INCREMENT,
+   
+    name varchar(50),
+    email varchar(50),
+    password varchar(50),
+    PRIMARY KEY (user_id)
+    
+);
+
+CREATE TABLE bank(
+    
+    user_id int NOT NULL AUTO_INCREMENT,
+    service_type varchar(20),
+    date varchar(50),
+    time varchar(50),
+    amount varchar(50),
+    security_type varchar(20),
+    PRIMARY KEY (user_id,date,time),
+    FOREIGN KEY (user_id) REFERENCES signup(user_id)
+);
+
+CREATE TABLE atm(
+    
+    user_id int NOT NULL AUTO_INCREMENT,
+    bank_name varchar(20),
+    date varchar(50),
+    time varchar(50),
+    amount varchar(50),
+    security_type varchar(20),
+    PRIMARY KEY (user_id,date,time),
+    FOREIGN KEY (user_id) REFERENCES signup(user_id)
+);
+
+CREATE TABLE eve_nt(
+    
+    user_id int NOT NULL AUTO_INCREMENT,
+    event_name varchar(20),
+    date varchar(20),
+    time varchar(20),
+    city varchar(20),
+    security_type varchar(20),
+    
+    PRIMARY KEY (user_id,date,time,event_name),
+    FOREIGN KEY (user_id) REFERENCES signup(user_id)
+);
+
+CREATE TABLE home(
+    
+    user_id int NOT NULL AUTO_INCREMENT,
+    
+    date varchar(50),
+    time varchar(50),
+    city varchar(50),
+    security_type varchar(20),
+    PRIMARY KEY (user_id,date,time,city),
+    FOREIGN KEY (user_id) REFERENCES signup(user_id)
+);
+
+
+CREATE TABLE apply(
+    
+    apply_id int NOT NULL AUTO_INCREMENT,
+    user_id int,
+    first_name varchar(20),
+    last_name varchar(20),
+    education varchar(20),
+    experience varchar(20),
+    foot varchar(2),
+    inch varchar(2),
+    dob varchar(12),
+    gender varchar(9),
+    email varchar(20),
+    mobile varchar(11),
+    company_name varchar(20),
+    post varchar(20),
+    primary KEY  (apply_id),
+    FOREIGN KEY (user_id) REFERENCES signup(user_id)
+    
+);

@@ -1,0 +1,123 @@
+##we can keep header till header 6 number.if we will keep bigger nmbr than this case the front will gonna be small
+& side by side.
+
+##paragraph,header,tag,title,head,body
+
+## <br> is html element,no ending tag here(for giving a break),its an empty element
+Empty elements can be "closed" in the opening tag like this: <br />.
+HTML5 does not require empty elements to be closed. But if you want stricter validation, 
+or if you need to make your document readable by XML parsers, you must close all HTML elements properly.
+
+
+## <a href="https://www.w3schools.com">This is a link</a> || for searchhing a link : (href) is an attribute 
+
+##HTML describes the structure of Web pages using markup
+HTML elements are the building blocks of HTML pages
+HTML elements are represented by tags
+HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+
+##The <!DOCTYPE html> declaration defines this document to be HTML5
+The <html> element is the root element of an HTML page
+The <head> element contains meta information about the document
+The <title> element specifies a title for the document
+The <body> element contains the visible page content
+The <h1> element defines a large heading
+The <p> element defines a paragraph
+
+##<p> <img src="pic.jpg" alt="nupa" width="123" height="150"> </p>
+         image srce $ alternative text & width & height (will show the picture )
+
+##</p> closing tags works as optioanl(na dileo output run hbe)
+
+## html tags are not case sensitive,,every tag can be written in lower case letter
+
+##<img src="img_typo.jpg" alt="Girl with a jacket">
+
+<p>If we try to display an image that does not exist, the value of the alt attribute will be displayed instead. </p>
+
+##Single or Double Quotes?
+Double quotes around attribute values are the most common in HTML, but single quotes can also be used.
+In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:
+<p title='John "ShotGun" Nelson'>
+<p title="John 'ShotGun' Nelson">
+
+##Attribute=	Description
+alt =	Specifies an alternative text for an image, when the image cannot be displayed
+disabled =	Specifies that an input element should be disabled
+href =	Specifies the URL (web address) for a link
+id =	Specifies a unique id for an element
+src =	Specifies the URL (web address) for an image
+style =	Specifies an inline CSS style for an element
+title =	Specifies extra information about an element (displayed as a tool tip)
+
+##<p style="color:red">This is a paragraph</p>
+  (This is a paragraph line will gonna b red color)
+
+##<html lang="en-US">  (1st e language set kore rakha jay)
+
+##<h1 style="font-size:60px;">Heading 1</h1> (heading/something er size set kra jay)
+
+
+##<hr> means horizotal rule;eta diya duita paragraph(---------)majhkhane line tana hoy
+
+##<meta charset="UTF-8">  Metadata typically define the document title, 
+character set, styles, links, scripts, and other meta information.
+
+##A container for all the head elements (title, scripts, styles, meta information, and more)
+
+##Browsers automatically add some white space (a margin) before and after a paragraph.
+
+##<pre> </pre>  (by giving this tag it will show lline by line formate,,with losts of space also)
+   it  Defines pre-formatted text
+
+##<h1 style="font-family:verdana;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p>
+    (font style)
+
+##<h1 style="font-size:600%;">This is a heading</h1> (for setting font size)
+
+##<h1 style="text-align:center;">Centered Heading</h1>  (for text Allignment)
+<p style="text-align:center;">Centered paragraph.</p>
+
+##Use the style attribute for styling HTML elements
+Use background-color for background color
+Use color for text colors
+Use font-family for text fonts
+Use font-size for text sizes
+Use text-align for text alignment
+
+##<strong> and <em> means that the text is "important"
+
+##Tag	Description
+<b>	Defines bold text
+<em>	Defines emphasized text 
+<i>	Defines italic text
+<small>	Defines smaller text
+<strong>	Defines important text
+<sub>	Defines subscripted text
+<sup>	Defines superscripted text
+<ins>	Defines inserted text
+<del>	Defines deleted text
+<mark>	Defines marked/highlighted text
+
+##abbreviation mane songkhep kora
+
+##The HTML <cite> element defines the title of a work.
+Browsers usually display <cite> elements in italic.
+
+##HTML Quotation and Citation Elements
+
+Tag	Description
+
+<abbr>	Defines an abbreviation or acronym
+<address>	Defines contact information for the author/owner of a document
+<bdo>	Defines the text direction
+<blockquote>	Defines a section that is quoted from another source
+<cite>	Defines the title of a work
+<q>	Defines a short inline quotation
+
+
+
+
+
+

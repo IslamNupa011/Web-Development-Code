@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+<style>
+
+
+  ul,li{
+  display:inline-block;
+  }
+  
+  li:hover{
+  background-color:#d9ffb3;
+  }
+  
+  ul{
+  width : 100%;
+  }
+  
+  li{
+  width:20%;
+  height:50px;
+  
+  text-align:center;
+  vertical-align:center;
+  border-bottom: 2px solid black;
+  }
+  
+  li:nth-child(4){
+  float:right;
+  }
+
+</style>
+</head>
+<body >
+
+<ul style="list-style-type:none">
+	<li> List 1</li>
+	<li> List 2</li>
+	<li> List 3</li>
+	<li> List 4</li>
+	
+
+
+  </ul>
+  
+
+</body>
+
+
+
+
+
+</html>
